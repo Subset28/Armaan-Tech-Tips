@@ -5,6 +5,7 @@ import { Input } from "./ui/input";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "./ui/tabs";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
+import { openGameSandbox } from "@/utils/openGameSandbox";
 
 export const GamesHub: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -140,7 +141,7 @@ const GameCard: React.FC<{ game: Game }> = ({ game }) => {
         <Button
           size="sm"
           className="w-full bg-gamer-accent hover:bg-gamer-accent/90 text-gamer-bg font-medium"
-          onClick={() => window.open(game.url, "_blank")}
+          onClick={() => openGameSandbox(game.url)}
         >
           Play
         </Button>
