@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        rowdies: ['Rowdies', 'cursive'],
+        sans: ['system-ui', '-apple-system', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,6 +51,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        gamer: {
+          bg: "hsl(var(--gamer-bg))",
+          text: "hsl(var(--gamer-text))",
+          accent: "hsl(var(--gamer-accent))",
+          card: "hsl(var(--gamer-card))",
+          border: "hsl(var(--gamer-border))",
+          muted: "hsl(var(--gamer-muted))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +69,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      transitionDuration: {
+        fast: "var(--transition-fast)",
+        normal: "var(--transition-normal)",
       },
       borderRadius: {
         lg: "var(--radius)",
