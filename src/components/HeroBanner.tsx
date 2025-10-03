@@ -1,5 +1,5 @@
 import React from "react";
-import heroBanner from "@/assets/hero-banner.png";
+import heroBanner from "@/assets/naruto-eating-food.gif";
 
 export const HeroBanner: React.FC = () => {
   return (
