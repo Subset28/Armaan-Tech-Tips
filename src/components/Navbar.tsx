@@ -60,14 +60,22 @@ export const Navbar: React.FC = () => {
               {isAuthenticated ? (
                 <Button
                   onClick={logout}
-                  variant="outline"
                   size="sm"
-                  className={isAuthenticated ? "border-gamer-border text-gamer-text hover:bg-gamer-border/30" : ""}
+                  variant="ghost"
+                  className="rounded-full px-4 py-1 
+                             bg-transparent border border-gamer-border 
+                             text-gamer-text 
+                             hover:bg-gamer-border/30 hover:text-gamer-accent
+                             transition-colors"
                 >
                   Logout
                 </Button>
               ) : (
-                <Button onClick={() => setIsLoginOpen(true)} size="sm">
+                <Button 
+                  onClick={() => setIsLoginOpen(true)} 
+                  size="sm"
+                  className={isAuthenticated ? "bg-gamer-accent hover:bg-gamer-accent/90 text-gamer-card" : ""}
+                >
                   Login
                 </Button>
               )}
@@ -108,14 +116,22 @@ export const Navbar: React.FC = () => {
                 {isAuthenticated ? (
                   <Button
                     onClick={logout}
-                    variant="outline"
                     size="sm"
-                    className={`w-full ${isAuthenticated ? "border-gamer-border text-gamer-text hover:bg-gamer-border/30" : ""}`}
+                    variant="ghost"
+                    className="w-full rounded-full px-4 py-1 
+                               bg-transparent border border-gamer-border 
+                               text-gamer-text 
+                               hover:bg-gamer-border/30 hover:text-gamer-accent
+                               transition-colors"
                   >
                     Logout
                   </Button>
                 ) : (
-                  <Button onClick={() => setIsLoginOpen(true)} size="sm" className="w-full">
+                  <Button 
+                    onClick={() => setIsLoginOpen(true)} 
+                    size="sm" 
+                    className={`w-full ${isAuthenticated ? "bg-gamer-accent hover:bg-gamer-accent/90 text-gamer-card" : ""}`}
+                  >
                     Login
                   </Button>
                 )}

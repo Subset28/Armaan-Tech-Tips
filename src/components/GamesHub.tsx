@@ -27,7 +27,7 @@ export const GamesHub: React.FC = () => {
   const popularGames = filteredGames.filter((game) => game.featured);
 
   return (
-    <section id="games" className="py-16 bg-gamer-bg">
+    <section id="games" className="py-16 bg-gamer-bg scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-3 mb-8">
           <Gamepad2 className="text-gamer-accent" size={32} />
