@@ -4,8 +4,7 @@ import { games, type Game } from "@/data/games";
 import { Input } from "./ui/input";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "./ui/tabs";
 import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
-import { openGameSandbox } from "@/utils/openGameSandbox";
+import { GameButton } from "./GameButton";
 
 export const GamesHub: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -119,7 +118,7 @@ const GameCard: React.FC<{ game: Game }> = ({ game }) => {
       <div className="aspect-video overflow-hidden bg-gamer-bg">
         <img
           src={game.thumbnail}
-          alt={game.title}
+          alt={`${game.title} game thumbnail`}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
         />
       </div>
@@ -138,13 +137,7 @@ const GameCard: React.FC<{ game: Game }> = ({ game }) => {
             </Badge>
           ))}
         </div>
-        <Button
-          size="sm"
-          className="w-full bg-gamer-accent hover:bg-gamer-accent/90 text-gamer-bg font-medium"
-          onClick={() => openGameSandbox(game.url)}
-        >
-          Play
-        </Button>
+        <GameButton url={game.url} label="Play" />
       </div>
     </div>
   );
