@@ -28,12 +28,12 @@ export const VisitorCounter: React.FC<Props> = ({ variant = "floating" }) => {
     const s1 = document.createElement("script");
     s1.src =
       "https://www.freevisitorcounters.com/auth.php?id=4ec2798bde811331fb1531de8e659293860a2208";
-    s1.defer = true;
+    s1.async = true;
 
     const s2 = document.createElement("script");
     s2.src =
       "https://www.freevisitorcounters.com/en/home/counter/1233557/t/0";
-    s2.defer = true;
+    s2.async = true;
 
     ref.current.appendChild(link);
     ref.current.appendChild(document.createElement("br"));

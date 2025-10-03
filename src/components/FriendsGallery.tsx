@@ -8,24 +8,23 @@ interface FriendPhoto {
   game: string;
 }
 
-// This function dynamically imports all images from the friends directory
-const importAll = (r: any) => {
-  return r.keys().map((fileName: string) => ({
-    id: fileName.substring(2).replace(/\.[^/.]+$/, ''), // Remove './' and file extension
-    src: r(fileName).default,
-    alt: `Friend ${fileName}`,
-    name: fileName.replace(/^.*[\\/]/, '').replace(/\.[^/.]+$/, ''), // Extract filename without extension
-    game: 'Gaming Together!', // Default game name, can be customized
-  }));
-};
-
 // Dynamically import all JPG/PNG images from the friends directory
 let friendPhotos: FriendPhoto[] = [];
 
 try {
-  // This will be processed by webpack's require.context
-  const images = require.context('../../assets/friends', false, /\.(png|jpe?g|svg)$/);
-  friendPhotos = importAll(images);
+  // Use Vite's import.meta.glob for dynamic imports
+  const friendImages = import.meta.glob(
+    "../assets/friends/*.{png,PNG,jpg,JPG,jpeg,JPEG,webp,WEBP,gif,GIF}",
+    { eager: true, as: "url" }
+  );
+
+  friendPhotos = Object.entries(friendImages).map(([path, src]) => ({
+    id: path.split('/').pop()?.replace(/\.[^/.]+$/, '') || '',
+    src: src as string,
+    alt: `Friend ${path}`,
+    name: path.split('/').pop()?.replace(/\.[^/.]+$/, '') || '',
+    game: 'Gaming Together!', // Default game name, can be customized
+  }));
 } catch (error) {
   console.warn('No images found in assets/friends directory');
 }

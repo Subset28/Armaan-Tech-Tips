@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
-  base: '/armaans-cozy-gamer-den/', // <-- IMPORTANT for GitHub Pages
+  base: '/Armaan-s-Tech-Tips/', // <-- IMPORTANT for GitHub Pages
   server: {
     host: "::",
     port: 8080,

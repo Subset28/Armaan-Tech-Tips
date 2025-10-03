@@ -16,7 +16,7 @@ const App = () => (
       <AuthProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <div className="relative min-h-screen">
             <Routes>
               <Route path="/" element={<Index />} />
