@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { LucideIcon } from "lucide-react";
 import { UtilityModal } from "./UtilityModal";
+import { GuideModal } from "./GuideModal";
 
 interface ContentItem {
   text: string;
   url?: string;
   utility?: "password" | "color" | "text" | "qr";
+  guide?: string; // Internal guide identifier
 }
 
 interface ContentSectionProps {
@@ -26,9 +28,14 @@ export const ContentSection: React.FC<ContentSectionProps> = ({
 }) => {
   const { isAuthenticated } = useAuth();
   const [selectedUtility, setSelectedUtility] = useState<string | null>(null);
+  const [selectedGuide, setSelectedGuide] = useState<string | null>(null);
 
   const handleUtilityClick = (utility: string) => {
     setSelectedUtility(utility);
+  };
+
+  const handleGuideClick = (guide: string) => {
+    setSelectedGuide(guide);
   };
 
   return (
@@ -65,6 +72,7 @@ export const ContentSection: React.FC<ContentSectionProps> = ({
               const itemText = typeof item === 'string' ? item : item.text;
               const itemUrl = typeof item === 'string' ? undefined : item.url;
               const itemUtility = typeof item === 'string' ? undefined : item.utility;
+              const itemGuide = typeof item === 'string' ? undefined : item.guide;
 
               return (
                 <div
@@ -95,6 +103,15 @@ export const ContentSection: React.FC<ContentSectionProps> = ({
                     >
                       {itemText}
                     </button>
+                  ) : itemGuide ? (
+                    <button
+                      onClick={() => handleGuideClick(itemGuide)}
+                      className={`font-medium text-left w-full ${
+                        isAuthenticated ? "text-gamer-text hover:text-gamer-accent" : "text-foreground hover:text-primary"
+                      }`}
+                    >
+                      {itemText}
+                    </button>
                   ) : (
                     <p
                       className={`font-medium ${
@@ -115,6 +132,12 @@ export const ContentSection: React.FC<ContentSectionProps> = ({
         isOpen={!!selectedUtility}
         onClose={() => setSelectedUtility(null)}
         utilityType={selectedUtility as any}
+      />
+
+      <GuideModal
+        isOpen={!!selectedGuide}
+        onClose={() => setSelectedGuide(null)}
+        guideType={selectedGuide}
       />
     </>
   );

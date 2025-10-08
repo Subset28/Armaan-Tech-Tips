@@ -58,12 +58,17 @@ const Index = () => {
         title="PC Optimizations"
         description="Tips and tricks to keep your PC running smoothly"
         items={[
-          "Startup Manager Guide",
-          "Disk Cleanup Tips",
-          "Registry Optimization",
-          "Driver Updates",
-          "Cooling Solutions",
-          "Performance Tweaks",
+          { text: "📋 Complete Optimization Guide", guide: "complete-guide" },
+          { text: "💾 System Restore Point Setup", guide: "restore-point" },
+          { text: "⚡ Power Plan Optimization", guide: "power-plan" },
+          { text: "🔥 CPU Core Unparking", guide: "unpark-cpu" },
+          { text: "🔧 Services Optimization", guide: "services-optimization" },
+          { text: "⚙️ Windows Settings", guide: "windows-settings" },
+          { text: "🎮 GPU Driver Optimization", guide: "gpu-optimization" },
+          { text: "📊 MSI Afterburner Setup", guide: "msi-afterburner" },
+          { text: "🌐 Network Optimization", guide: "network-optimization" },
+          { text: "📡 TCP Optimizer Setup", guide: "tcp-optimization" },
+          { text: "🧹 System Cleanup Tools", guide: "system-cleanup" },
         ]}
       />
 
@@ -73,12 +78,12 @@ const Index = () => {
         title="Education"
         description="Learning resources and educational content"
         items={[
-          "Programming Tutorials",
-          "Math Resources",
-          "Study Techniques",
-          "Science Experiments",
-          "Language Learning",
-          "Tech Concepts",
+          { text: "💻 Programming Fundamentals", guide: "programming-basics" },
+          { text: "🧮 Math Resources", guide: "math-resources" },
+          { text: "📚 Study Techniques", guide: "study-methods" },
+          { text: "🔬 Science Experiments", guide: "science-experiments" },
+          { text: "🌍 Language Learning", guide: "language-learning" },
+          { text: "🖥️ Tech Concepts Explained", guide: "tech-concepts" },
         ]}
       />
 
@@ -88,12 +93,12 @@ const Index = () => {
         title="Other"
         description="Additional resources and interesting finds"
         items={[
-          "Cool Websites",
-          "Tech News",
-          "Community Projects",
-          "Helpful Links",
-          "Software Recommendations",
-          "Tips & Tricks",
+          { text: "🔗 Cool Websites Collection", guide: "cool-websites" },
+          { text: "📰 Tech News & Updates", guide: "tech-news" },
+          { text: "👥 Community Projects", guide: "community-projects" },
+          { text: "📋 Helpful Links Directory", guide: "helpful-links" },
+          { text: "💿 Software Recommendations", guide: "software-recommendations" },
+          { text: "💡 Tips & Tricks Compilation", guide: "tips-tricks" },
         ]}
       />
 
