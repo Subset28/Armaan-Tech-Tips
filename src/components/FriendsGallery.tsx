@@ -47,7 +47,7 @@ const FriendsGallery: React.FC = () => {
               <img 
                 src={photo.src} 
                 alt={photo.alt} 
-                className="object-cover h-48 w-full"
+                className="w-full h-auto object-contain max-h-96"
               />
               <div className="p-4">
                 <p className="font-bold">{photo.name}</p>
