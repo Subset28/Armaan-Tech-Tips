@@ -347,14 +347,242 @@ export const GuideModal: React.FC<GuideModalProps> = ({
           <div className="space-y-4">
             <h3 className="text-xl font-semibold">Effective Study Techniques</h3>
             <div className="space-y-3">
-              <p><strong>Pomodoro Technique:</strong></p>
-              <p>Study for 25 minutes, then take a 5-minute break. After 4 cycles, take a longer break.</p>
-              <p><strong>Active Recall:</strong></p>
-              <p>Test yourself on material instead of just re-reading notes.</p>
-              <p><strong>Spaced Repetition:</strong></p>
-              <p>Review information at increasing intervals to improve long-term retention.</p>
-              <p><strong>Feynman Technique:</strong></p>
-              <p>Explain complex topics in simple terms as if teaching someone else.</p>
+              <p><strong>📚 Study Less, Score More:</strong></p>
+              <p>Focus on effectiveness over hours. Don't measure success by time spent studying, but by how well you understand and can apply the material.</p>
+
+              <p><strong>🔄 Read Backwards Technique:</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li>Start with chapter summaries and key points</li>
+                <li>Work backwards through headings, charts, and bold terms</li>
+                <li>Read first paragraph, skim body, read last paragraph of each section</li>
+                <li>Only read every word if you have extra time</li>
+              </ul>
+
+              <p><strong>📦 Batch Similar Tasks:</strong></p>
+              <p>Group similar subjects together to minimize mental transitions. Study all math/science together, then all writing subjects together.</p>
+
+              <p><strong>⏰ Give Yourself Constraints:</strong></p>
+              <p>Use Parkinson's Law to your advantage. Give yourself less time than you think you need - you'll work more efficiently and finish faster.</p>
+
+              <p><strong>🤖 Leverage AI Tools:</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li>Use AI for brainstorming and outlining</li>
+                <li>Generate practice questions</li>
+                <li>Get explanations in simple terms</li>
+                <li>Create study schedules</li>
+              </ul>
+
+              <p><strong>🚫 Don't Idle on Hard Problems:</strong></p>
+              <p>When stuck on a difficult problem, move on and come back later. Avoid the sunk cost fallacy - don't waste time on unsolvable problems.</p>
+
+              <p><strong>📝 Do Mindless Work First:</strong></p>
+              <p>Tackle fixed tasks (flashcards, simple reviews) before variable tasks (essays, complex problems) to create natural time constraints.</p>
+
+              <p><strong>🏷️ Tag Your Notes:</strong></p>
+              <p>Mark difficult concepts during lectures with stars or symbols. During review, focus on tagged items first.</p>
+
+              <div className="bg-green-50 p-3 rounded-md">
+                <p className="text-sm text-green-800">
+                  💡 <strong>Pro Tip:</strong> Combine these techniques for maximum effectiveness. The key is working smarter, not harder!
+                </p>
+              </div>
+            </div>
+          </div>
+        );
+
+      case "review-channels":
+        return (
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold">Subject Review Channels</h3>
+            <div className="space-y-3">
+              <p><strong>Economics 📈</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@JacobReed" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Jacob Reed/Review Econ</a></li>
+                <li><a href="https://www.youtube.com/@jacobclifford" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Jacob Clifford</a></li>
+              </ul>
+
+              <p><strong>Biology 🧬</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@APBioPenguins" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">AP Bio Penguins ⭐</a></li>
+                <li><a href="https://www.youtube.com/@AmoebaSisters" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Amoeba Sisters</a></li>
+                <li><a href="https://www.youtube.com/@GabePoser" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Gabe Poser ⭐</a></li>
+                <li><a href="https://www.youtube.com/@HeyNowScience" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">HeyNowScience</a></li>
+                <li><a href="https://www.youtube.com/@BozemanScience" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Bozeman Science ⭐</a></li>
+                <li><a href="https://www.youtube.com/@LasseterLab" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Lasseter's Lab</a></li>
+                <li><a href="https://www.youtube.com/@Carrara" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Carrara</a></li>
+              </ul>
+
+              <p><strong>Environmental Science 🌍</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@Smedes" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Smedes</a></li>
+              </ul>
+
+              <p><strong>Human Geography 🗺️</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@MrSinn" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Mr. Sinn</a></li>
+                <li><a href="https://www.youtube.com/@crashcourse" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Crash Course</a></li>
+              </ul>
+
+              <p><strong>Psychology 🧠</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@MrSinn" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Mr. Sinn</a></li>
+                <li><a href="https://www.youtube.com/@GetPsychedWithTimSteadman" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Get Psyched with Tim Steadman</a></li>
+                <li><a href="https://www.youtube.com/@MandyRice" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Mandy Rice</a></li>
+                <li><a href="https://www.youtube.com/@SocialScienceSimplified" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Social Science Simplified</a></li>
+              </ul>
+
+              <p><strong>US Government ⚖️</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@Heimler" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Heimler ⭐</a></li>
+                <li><a href="https://www.youtube.com/@Lamanna" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Lamanna</a></li>
+                <li><a href="https://www.youtube.com/@JoczProductions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Jocz Productions</a></li>
+              </ul>
+
+              <p><strong>US History 🇺🇸</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@Heimler" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Heimler ⭐</a></li>
+                <li><a href="https://www.youtube.com/@antisocialstudies" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">antisocialstudies ⭐</a></li>
+                <li><a href="https://www.youtube.com/@JoczProductions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Jocz Productions</a></li>
+                <li><a href="https://www.youtube.com/@AdamNorris" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Adam Norris</a></li>
+                <li><a href="https://www.youtube.com/@MorganAPTeaching" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Morgan AP Teaching</a></li>
+                <li><a href="https://www.youtube.com/@TomRichey" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Tom Richey</a></li>
+              </ul>
+
+              <p><strong>World History 🌍</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@antisocialstudies" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">antisocialstudies ⭐</a></li>
+                <li><a href="https://www.youtube.com/@StephanieGorges" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Stephanie Gorges</a></li>
+                <li><a href="https://www.youtube.com/@FreemanPedia" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Freeman-Pedia</a></li>
+                <li><a href="https://www.youtube.com/@Heimler" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Heimler ⭐</a></li>
+              </ul>
+
+              <p><strong>Statistics 📊</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@MichealPorinchak" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Micheal Porinchak</a></li>
+                <li><a href="https://www.youtube.com/@HayesWorldofMath" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Hayes' World of Math</a></li>
+                <li><a href="https://www.youtube.com/@TheOrganicChemistryTutor" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Organic Chemistry Tutor ⭐</a></li>
+                <li><a href="https://www.youtube.com/@SkewtheScript" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Skew the Script</a></li>
+                <li><a href="https://www.youtube.com/@FerreriaMathClass" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">FerreriaMathClass/Stats Medic</a></li>
+              </ul>
+
+              <p><strong>Physics ⚛️</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@MichelVanBiezen" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Michel Van Biezen</a></li>
+                <li><a href="https://www.youtube.com/@FlippingPhysics" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Flipping Physics ⭐</a></li>
+                <li><a href="https://www.youtube.com/@WeAreShowboat" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">We Are Showboat</a></li>
+                <li><a href="https://www.youtube.com/@DanFullerton" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Dan Fullerton</a></li>
+                <li><a href="https://www.youtube.com/@BozemanScience" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Bozeman Science ⭐</a></li>
+                <li><a href="https://www.youtube.com/@AllenTsaoTheSTEMCoach" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Allen Tsao the STEM Coach</a></li>
+                <li><a href="https://www.youtube.com/@PhysicsByBowman" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Physics by Bowman</a></li>
+                <li><a href="https://www.youtube.com/@LasseViren" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Lasse Viren</a></li>
+                <li><a href="https://www.youtube.com/@physicsgirl" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Physics Girl</a></li>
+                <li><a href="https://www.youtube.com/@WNYTutor" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">WNY Tutor</a></li>
+                <li><a href="https://www.youtube.com/@TheOrganicChemistryTutor" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Organic Chemistry Tutor ⭐</a></li>
+              </ul>
+
+              <p><strong>Chemistry ⚗️</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@TheOrganicChemistryTutor" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Organic Chemistry Tutor ⭐⭐</a></li>
+                <li><a href="https://www.youtube.com/@JeremyKrug" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Jeremy Krug</a></li>
+                <li><a href="https://www.youtube.com/@ChadsPrep" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Chad's Prep</a></li>
+                <li><a href="https://www.youtube.com/@MichaelFarabaugh" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Michael Farabaugh</a></li>
+                <li><a href="https://www.youtube.com/@AbigailGiordano" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Abigail Giordano</a></li>
+                <li><a href="https://www.youtube.com/@BozemanScience" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Bozeman Science ⭐</a></li>
+                <li><a href="https://www.youtube.com/@ProfessorDerricotte" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Professor Derricotte</a></li>
+              </ul>
+
+              <p><strong>Calculus 📐</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@TheOrganicChemistryTutor" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Organic Chemistry Tutor ⭐</a></li>
+                <li><a href="https://www.youtube.com/@turksvids" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">turksvids</a></li>
+                <li><a href="https://www.youtube.com/@ProfessorLeonard" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Professor Leonard</a></li>
+                <li><a href="https://www.youtube.com/@vinteachesmath" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">vinteachesmath</a></li>
+                <li><a href="https://www.youtube.com/@Algebros" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Algebros</a></li>
+                <li><a href="https://www.youtube.com/@3blue1brown" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">3Blue1Brown</a></li>
+                <li><a href="https://www.youtube.com/@patrickjmt" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">PatrickJMT</a></li>
+                <li><a href="https://www.youtube.com/@Mathispower4u" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Mathispower4u</a></li>
+                <li><a href="https://www.youtube.com/@BrianMcLogan" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Brian McLogan</a></li>
+                <li><a href="https://www.youtube.com/@AllenTsaoTheSTEMCoach" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Allen Tsao the STEM Coach</a></li>
+                <li><a href="https://www.youtube.com/@KristinKing" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Kristin King</a></li>
+                <li><a href="https://www.youtube.com/@blackpenredpen" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">blackpenredpen</a></li>
+                <li><a href="https://www.youtube.com/@MichelVanBiezen" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Michel Van Biezen</a></li>
+              </ul>
+
+              <p><strong>European History 🇪🇺</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@TomRichey" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Tom Richey</a></li>
+                <li><a href="https://www.youtube.com/@Heimler" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Heimler</a></li>
+                <li><a href="https://www.youtube.com/@antisocialstudies" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">antisocialstudies</a></li>
+              </ul>
+
+              <p><strong>English Language 📝</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@MarcoLearning" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Marco Learning</a></li>
+                <li><a href="https://www.youtube.com/@GardenofEnglish" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Garden of English</a></li>
+                <li><a href="https://www.youtube.com/@CoachHallWriters" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Coach Hall Writers</a></li>
+                <li><a href="https://www.youtube.com/@MsPeerEditor" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Ms. Peer Editor</a></li>
+              </ul>
+
+              <p><strong>Precalculus 🔢</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@Algebros" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Algebros</a></li>
+                <li><a href="https://www.youtube.com/@BrianMcLogan" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Brian McLogan ⭐</a></li>
+                <li><a href="https://www.youtube.com/@MichelVanBiezen" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Michel Van Biezen</a></li>
+                <li><a href="https://www.youtube.com/@MariosMathTutoring" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Mario's Math Tutoring ⭐⭐⭐</a></li>
+                <li><a href="https://www.youtube.com/@KatherineQuigley" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Katherine Quigley</a></li>
+              </ul>
+
+              <p><strong>Spanish Literature 📚</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@CarinaSpanish" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Carina Spanish</a></li>
+              </ul>
+
+              <p><strong>English Literature 📖</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@EnglishNerd" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">English Nerd</a></li>
+                <li><a href="https://www.youtube.com/@MarcoLearning" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Marco Learning</a></li>
+                <li><a href="https://www.youtube.com/@GardenofEnglish" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Garden of English</a></li>
+                <li><a href="https://www.youtube.com/@MsPeerEditor" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Ms. Peer Editor</a></li>
+              </ul>
+
+              <p><strong>Computer Science Principles 💻</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@MrKaiser" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Mr. Kaiser</a></li>
+                <li><a href="https://www.youtube.com/@DrWu" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Dr. Wu</a></li>
+              </ul>
+
+              <p><strong>Computer Science A 🖥️</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@colleenlewis" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">colleen lewis/CS Awesome</a></li>
+                <li><a href="https://www.youtube.com/@BillBarnum" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Bill Barnum</a></li>
+                <li><a href="https://www.youtube.com/@AjayGandecha" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Ajay Gandecha My King</a></li>
+              </ul>
+
+              <p><strong>Art History 🎨</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@FleetsArtHistory" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Fleet's Art History</a></li>
+                <li><a href="https://www.youtube.com/@Smarthistory" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Smarthistory</a></li>
+                <li><a href="https://www.youtube.com/@AllisonTalle" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Allison Talle</a></li>
+                <li><a href="https://www.youtube.com/@JenniferPatch" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Jennifer Patch</a></li>
+                <li><a href="https://www.youtube.com/@ArtHistory101" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Art History 101</a></li>
+              </ul>
+
+              <p><strong>Music Theory 🎵</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@J0YY" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">J0YY</a></li>
+                <li><a href="https://www.youtube.com/@ChurchillMusiciansClub" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Churchill Musicians Club</a></li>
+              </ul>
+
+              <p><strong>Spanish Language 🇪🇸</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><a href="https://www.youtube.com/@MarcoLearning" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Marco Learning</a></li>
+              </ul>
+
+              <div className="bg-yellow-50 p-3 rounded-md">
+                <p className="text-sm text-yellow-800">
+                  💡 <strong>Note:</strong> ⭐ indicates highly recommended channels. Click on channel names to visit their YouTube pages.
+                </p>
+              </div>
             </div>
           </div>
         );
@@ -585,6 +813,7 @@ export const GuideModal: React.FC<GuideModalProps> = ({
       case "programming-basics": return "Programming Fundamentals";
       case "math-resources": return "Math Resources";
       case "study-methods": return "Study Techniques";
+      case "review-channels": return "Subject Review Channels";
       case "science-experiments": return "Science Experiments";
       case "language-learning": return "Language Learning";
       case "tech-concepts": return "Technology Concepts";

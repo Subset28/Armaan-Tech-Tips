@@ -79,6 +79,8 @@ const Index = () => {
         title="Education"
         description="Learning resources and educational content"
         items={[
+          { text: "🧮 Course Grade Calculator", url: "https://www.desmos.com/calculator/wrmalnmnpj" },
+          { text: "📺 Subject Review Channels", guide: "review-channels" },
           { text: "💻 Programming Fundamentals", guide: "programming-basics" },
           { text: "🧮 Math Resources", guide: "math-resources" },
           { text: "📚 Study Techniques", guide: "study-methods" },
