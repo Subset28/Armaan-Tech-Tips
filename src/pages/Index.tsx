@@ -42,12 +42,9 @@ const Index = () => {
             title="Utilities"
         description="Essential tools and utilities to enhance your experience"
         items={[
-          "File Converter",
-          "Password Generator",
-          "QR Code Creator",
-          "Color Picker",
-          "Text Editor",
-          "Image Compressor",
+          { text: "Snow Day Predictor", url: "https://docs.google.com/spreadsheets/d/1dInwA7F-w0TB4Qy-D_463frdBPr9c21LPI4kdhktsO4/edit?gid=0#gid=0" },
+          { text: "The Best Adblocker", url: "https://ublockorigin.com/" },
+          { text: "LCPS Calendars", url: "https://www.lcps.org/documents/discover-lcps/about-loudoun/calendars---loudoun-county-public-schools/629038" },
         ]}
       />
 

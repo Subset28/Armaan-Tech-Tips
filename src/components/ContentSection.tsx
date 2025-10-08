@@ -2,12 +2,17 @@ import React from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { LucideIcon } from "lucide-react";
 
+interface ContentItem {
+  text: string;
+  url?: string;
+}
+
 interface ContentSectionProps {
   id: string;
   icon: LucideIcon;
   title: string;
   description: string;
-  items: string[];
+  items: (string | ContentItem)[];
 }
 
 export const ContentSection: React.FC<ContentSectionProps> = ({
@@ -48,24 +53,42 @@ export const ContentSection: React.FC<ContentSectionProps> = ({
         </p>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((item, index) => (
-            <div
-              key={index}
-              className={`p-6 rounded-lg border transition-all duration-normal hover:scale-105 ${
-                isAuthenticated
-                  ? "bg-gamer-card border-gamer-border hover:border-gamer-accent hover:shadow-lg hover:shadow-gamer-accent/10"
-                  : "bg-card border-border hover:border-primary hover:shadow-lg"
-              }`}
-            >
-              <p
-                className={`font-medium ${
-                  isAuthenticated ? "text-gamer-text" : "text-foreground"
+          {items.map((item, index) => {
+            const itemText = typeof item === 'string' ? item : item.text;
+            const itemUrl = typeof item === 'string' ? undefined : item.url;
+
+            return (
+              <div
+                key={index}
+                className={`p-6 rounded-lg border transition-all duration-normal hover:scale-105 ${
+                  isAuthenticated
+                    ? "bg-gamer-card border-gamer-border hover:border-gamer-accent hover:shadow-lg hover:shadow-gamer-accent/10"
+                    : "bg-card border-border hover:border-primary hover:shadow-lg"
                 }`}
               >
-                {item}
-              </p>
-            </div>
-          ))}
+                {itemUrl ? (
+                  <a
+                    href={itemUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`font-medium block ${
+                      isAuthenticated ? "text-gamer-text hover:text-gamer-accent" : "text-foreground hover:text-primary"
+                    }`}
+                  >
+                    {itemText}
+                  </a>
+                ) : (
+                  <p
+                    className={`font-medium ${
+                      isAuthenticated ? "text-gamer-text" : "text-foreground"
+                    }`}
+                  >
+                    {itemText}
+                  </p>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
