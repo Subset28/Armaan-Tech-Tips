@@ -1,60 +1,24 @@
-import React, { useEffect, useRef } from "react";
-
-declare global {
-  interface Window { __fvcLoaded?: boolean }
-}
+import React from "react";
 
 type Props = {
   variant?: "floating" | "inline";
 };
 
 export const VisitorCounter: React.FC<Props> = ({ variant = "floating" }) => {
-  const ref = useRef<HTMLDivElement | null>(null);
+  // Counter is now embedded in index.html head
+  // This component can be used for styling if needed
 
-  useEffect(() => {
-    if (!ref.current) return;
-
-    // Avoid duplicate script injection (HMR or multiple mounts)
-    if (window.__fvcLoaded) return;
-    window.__fvcLoaded = true;
-
-    // Clear then inject
-    ref.current.innerHTML = "";
-
-    const link = document.createElement("a");
-    link.href = "http://www.freevisitorcounters.com";
-    link.textContent = "free counter";
-    link.style.display = "block";
-    link.style.fontSize = "10px";
-    link.style.textAlign = "center";
-    link.style.marginBottom = "2px";
-
-    const s1 = document.createElement("script");
-    s1.src =
-      "https://www.freevisitorcounters.com/auth.php?id=4ec2798bde811331fb1531de8e659293860a2208";
-    s1.async = true;
-
-    const s2 = document.createElement("script");
-    s2.src =
-      "https://www.freevisitorcounters.com/en/home/counter/1233557/t/0";
-    s2.async = true;
-
-    ref.current.appendChild(link);
-    ref.current.appendChild(s1);
-    ref.current.appendChild(s2);
-  }, []);
-
-  // Floating widget style for every page (stays subtle)
   if (variant === "floating") {
     return (
-      <div
-        ref={ref}
-        className="fixed bottom-4 right-4 z-[9999] rounded-md border border-gamer-border
-                   bg-gamer-card/90 px-3 py-2 text-xs text-gamer-text shadow-lg min-w-[100px]"
-      />
+      <div className="fixed bottom-4 right-4 z-[9999] rounded-md border border-gamer-border
+                     bg-gamer-card/90 px-3 py-2 text-xs text-gamer-text shadow-lg">
+        <div className="text-center">
+          <div className="text-[10px] opacity-75 mb-1">Visitors</div>
+          <div className="font-mono text-sm">Loading...</div>
+        </div>
+      </div>
     );
   }
 
-  // Inline (use when you want the counter inside a section)
-  return <div ref={ref} className="mx-auto w-fit" />;
+  return <div className="text-center text-sm text-muted-foreground">Visitor Counter Active</div>;
 };
