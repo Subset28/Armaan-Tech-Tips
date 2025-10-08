@@ -24,6 +24,10 @@ export const VisitorCounter: React.FC<Props> = ({ variant = "floating" }) => {
     const link = document.createElement("a");
     link.href = "http://www.freevisitorcounters.com";
     link.textContent = "free counter";
+    link.style.display = "block";
+    link.style.fontSize = "10px";
+    link.style.textAlign = "center";
+    link.style.marginBottom = "2px";
 
     const s1 = document.createElement("script");
     s1.src =
@@ -36,7 +40,6 @@ export const VisitorCounter: React.FC<Props> = ({ variant = "floating" }) => {
     s2.async = true;
 
     ref.current.appendChild(link);
-    ref.current.appendChild(document.createElement("br"));
     ref.current.appendChild(s1);
     ref.current.appendChild(s2);
   }, []);
@@ -47,7 +50,7 @@ export const VisitorCounter: React.FC<Props> = ({ variant = "floating" }) => {
       <div
         ref={ref}
         className="fixed bottom-4 right-4 z-[9999] rounded-md border border-gamer-border
-                   bg-gamer-card/90 px-3 py-2 text-xs text-gamer-text shadow-lg"
+                   bg-gamer-card/90 px-3 py-2 text-xs text-gamer-text shadow-lg min-w-[100px]"
       />
     );
   }
