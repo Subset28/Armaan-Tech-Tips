@@ -96,15 +96,16 @@ const Index = () => {
         ]}
       />
 
-          <footer className={`py-8 text-center border-t ${
+        </>
+      )}
+
+      <footer className={`py-8 text-center border-t ${
         isAuthenticated 
           ? "bg-gamer-card border-gamer-border text-gamer-muted" 
           : "bg-card border-border text-muted-foreground"
       }`}>
         <p className="text-sm">© 2025 Armaan's Tech Tips. All rights reserved.</p>
-          </footer>
-        </>
-      )}
+      </footer>
     </div>
   );
 };

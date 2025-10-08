@@ -94,9 +94,11 @@ export const GamerHome: React.FC = () => {
           your school's policies regarding online resources.
         </p>
 
+        {/* TODO: Add your Google Form URL below to enable suggestions */}
+        {/* 
         <div className="text-center mt-4">
           <a
-            href="https://forms.gle/YOUR_GOOGLE_FORM" /* TODO: replace */
+            href="https://forms.gle/YOUR_GOOGLE_FORM"
             target="_blank"
             rel="noreferrer"
             className="underline text-gamer-text hover:text-gamer-accent"
@@ -104,6 +106,7 @@ export const GamerHome: React.FC = () => {
             Suggestions
           </a>
         </div>
+        */}
       </section>
     </main>
   );
