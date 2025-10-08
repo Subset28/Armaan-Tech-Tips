@@ -7,6 +7,10 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   base: '/Armaan-s-Tech-Tips/', // <-- IMPORTANT for GitHub Pages
+  build: {
+    outDir: 'docs', // Build to docs folder for GitHub Pages
+    emptyOutDir: true,
+  },
   server: {
     host: "::",
     port: 8080,
