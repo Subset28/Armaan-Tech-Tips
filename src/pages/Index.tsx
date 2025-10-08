@@ -59,6 +59,7 @@ const Index = () => {
         description="Tips and tricks to keep your PC running smoothly"
         items={[
           { text: "📋 Complete Optimization Guide", guide: "complete-guide" },
+          { text: "🛠️ Chris Titus Tech's WinUtil", guide: "winutil-guide" },
           { text: "💾 System Restore Point Setup", guide: "restore-point" },
           { text: "⚡ Power Plan Optimization", guide: "power-plan" },
           { text: "🔥 CPU Core Unparking", guide: "unpark-cpu" },

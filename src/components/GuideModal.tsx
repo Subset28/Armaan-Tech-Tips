@@ -230,6 +230,67 @@ export const GuideModal: React.FC<GuideModalProps> = ({
           </div>
         );
 
+      case "winutil-guide":
+        return (
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold">Chris Titus Tech's Windows Utility</h3>
+            <div className="space-y-3">
+              <p><strong>What is WinUtil?</strong></p>
+              <p>WinUtil is a comprehensive PowerShell script created by Chris Titus Tech that automates Windows optimization, installation of essential software, debloating, and system troubleshooting. It's trusted by over 40,000 users for maintaining clean, optimized Windows systems.</p>
+
+              <p><strong>🚀 Quick Start (Stable Version):</strong></p>
+              <div className="bg-gray-100 p-3 rounded-md font-mono text-sm">
+                irm "https://christitus.com/win" | iex
+              </div>
+
+              <p><strong>🛠️ Development Version:</strong></p>
+              <div className="bg-gray-100 p-3 rounded-md font-mono text-sm">
+                irm "https://christitus.com/windev" | iex
+              </div>
+
+              <p><strong>📦 Key Features:</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><strong>Install Tab:</strong> Essential software, browsers, development tools, gaming software</li>
+                <li><strong>Tweaks Tab:</strong> Performance optimizations, privacy settings, UI customizations</li>
+                <li><strong>Config Tab:</strong> System configuration, feature enable/disable, Windows updates</li>
+                <li><strong>Updates Tab:</strong> Windows update management and troubleshooting</li>
+              </ul>
+
+              <p><strong>⚡ Performance Benefits:</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li>Removes Windows bloatware and unnecessary services</li>
+                <li>Optimizes system settings for better performance</li>
+                <li>Disables telemetry and data collection</li>
+                <li>Improves privacy and security settings</li>
+                <li>Speeds up system boot times</li>
+              </ul>
+
+              <p><strong>🛡️ Safety Features:</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li>Must be run as Administrator for system changes</li>
+                <li>Creates system restore points before major changes</li>
+                <li>Includes backup and restore functionality</li>
+                <li>Well-documented and community-tested</li>
+              </ul>
+
+              <p><strong>💻 Installation Categories:</strong></p>
+              <ul className="list-disc list-inside space-y-1">
+                <li><strong>Browsers:</strong> Chrome, Firefox, Edge, Brave</li>
+                <li><strong>Development:</strong> VS Code, Git, Node.js, Python</li>
+                <li><strong>Utilities:</strong> 7-Zip, VLC, LibreOffice, Notepad++</li>
+                <li><strong>Gaming:</strong> Steam, Epic Games, Ubisoft Connect</li>
+                <li><strong>Communications:</strong> Discord, Teams, Zoom</li>
+              </ul>
+
+              <div className="bg-blue-50 p-3 rounded-md">
+                <p className="text-sm text-blue-800">
+                  💡 <strong>Pro Tip:</strong> Run WinUtil after a fresh Windows installation for the best results. Always create a system restore point first!
+                </p>
+              </div>
+            </div>
+          </div>
+        );
+
       case "programming-basics":
         return (
           <div className="space-y-4">
@@ -520,6 +581,7 @@ export const GuideModal: React.FC<GuideModalProps> = ({
       case "tcp-optimization": return "TCP Optimizer";
       case "system-cleanup": return "System Cleanup";
       case "complete-guide": return "Complete Optimization Guide";
+      case "winutil-guide": return "Chris Titus Tech's Windows Utility";
       case "programming-basics": return "Programming Fundamentals";
       case "math-resources": return "Math Resources";
       case "study-methods": return "Study Techniques";
