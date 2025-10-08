@@ -96,27 +96,46 @@ const Index = () => {
         title="Other"
         description="Additional resources and interesting finds"
         items={[
+          { text: "👨‍💻 About Me", guide: "about-me" },
           { text: "🔗 Cool Websites Collection", guide: "cool-websites" },
           { text: "📰 Tech News & Updates", guide: "tech-news" },
           { text: "👥 Community Projects", guide: "community-projects" },
           { text: "📋 Helpful Links Directory", guide: "helpful-links" },
           { text: "💿 Software Recommendations", guide: "software-recommendations" },
           { text: "💡 Tips & Tricks Compilation", guide: "tips-tricks" },
+          { text: "📝 Suggestions", url: "https://docs.google.com/forms/d/e/1FAIpQLSceaVXrWwjj0zqMqdmPJTCxPQoq166Pe72I7pKjcChU-h1mRQ/viewform?embedded=true" },
+          { text: "⚖️ DMCA Takedown", url: "https://docs.google.com/forms/d/e/1FAIpQLSe6wFMCXkW_U_U_GwbnyxscD2t91wP4KakVLOiKBzYnZRFfTg/viewform" },
         ]}
       />
 
         </>
       )}
-
       <footer className={`py-8 text-center border-t ${
         isAuthenticated 
           ? "bg-gamer-card border-gamer-border text-gamer-muted" 
           : "bg-card border-border text-muted-foreground"
       }`}>
-        <p className="text-sm">© 2025 Armaan's Tech Tips. All rights reserved.</p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-sm mb-4">
+            © 2024 Armaan's Tech Tips. Made with ❤️ by a fellow student who loves tech!
+          </p>
+          <div className="flex flex-wrap justify-center gap-6 text-sm">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSceaVXrWwjj0zqMqdmPJTCxPQoq166Pe72I7pKjcChU-h1mRQ/viewform?embedded=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`hover:underline ${isAuthenticated ? "text-gamer-accent" : "text-primary"}`}
+            >
+              📝 Suggestions
+            </a>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe6wFMCXkW_U_U_GwbnyxscD2t91wP4KakVLOiKBzYnZRFfTg/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`hover:underline ${isAuthenticated ? "text-gamer-accent" : "text-primary"}`}
+            >
+              ⚖️ DMCA Takedown
+            </a>
+          </div>
+        </div>
       </footer>
-    </div>
-  );
-};
-
-export default Index;

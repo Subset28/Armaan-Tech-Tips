@@ -656,6 +656,37 @@ export const GuideModal: React.FC<GuideModalProps> = ({
           </div>
         );
 
+      case "about-me":
+        return (
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold">About Me</h3>
+            <div className="space-y-3">
+              <p><strong>Hi! My name is Armaan and I am the creator of Armaan's Tech Tips!</strong></p>
+
+              <p>I absolutely love technology and have a tendency to get bored in school very easily. I also have a passion for upgrading and optimizing things - whether it's my PC, my workflow, or even my study habits!</p>
+
+              <p>I created Armaan's Tech Tips because during my freshman year, I never had anything engaging to do in school and thought, "Why don't I put all the games I play into one place and share them with others?" And just like that, Armaan's Tech Tips was born!</p>
+
+              <p>I also love web design, so this project has been a perfect way to combine my interests in technology, gaming, and creative design. Now in my junior year, I've expanded the site to include not just games, but also:</p>
+
+              <ul className="list-disc list-inside space-y-1">
+                <li><strong>Interactive Utilities</strong> - Password generators, color pickers, QR code makers</li>
+                <li><strong>PC Optimization Guides</strong> - Comprehensive tutorials for better performance</li>
+                <li><strong>Educational Resources</strong> - Study techniques, subject review channels, and learning tools</li>
+                <li><strong>Helpful Links</strong> - Curated resources for productivity and development</li>
+              </ul>
+
+              <p>This site has grown from a simple gaming collection into a comprehensive tech resource hub where I can share my knowledge and discoveries with fellow students and tech enthusiasts!</p>
+
+              <div className="bg-blue-50 p-3 rounded-md">
+                <p className="text-sm text-blue-800">
+                  💡 <strong>Fun Fact:</strong> I believe that technology should make life more fun and efficient, not more complicated. That's why I focus on practical, easy-to-use solutions!
+                </p>
+              </div>
+            </div>
+          </div>
+        );
+
       case "cool-websites":
         return (
           <div className="space-y-4">
@@ -817,6 +848,7 @@ export const GuideModal: React.FC<GuideModalProps> = ({
       case "science-experiments": return "Science Experiments";
       case "language-learning": return "Language Learning";
       case "tech-concepts": return "Technology Concepts";
+      case "about-me": return "About Me";
       case "cool-websites": return "Cool Websites";
       case "tech-news": return "Tech News";
       case "community-projects": return "Community Projects";
