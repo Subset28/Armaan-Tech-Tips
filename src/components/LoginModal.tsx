@@ -82,9 +82,6 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
           <Button type="submit" className="w-full" disabled={isLoading}>
             {isLoading ? "Logging in..." : "Login"}
           </Button>
-          <p className="text-xs text-muted-foreground text-center">
-            Demo: Armin28 / ArmaansTechTips
-          </p>
         </form>
       </DialogContent>
     </Dialog>
