@@ -3,7 +3,7 @@ import heroBanner from "@/assets/naruto-eating-food.gif";
 
 export const HeroBanner: React.FC = () => {
   return (
-    <section className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
+    <section id="home" className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
       <img
         src={heroBanner}
         alt="Naruto eating ramen"

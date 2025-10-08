@@ -11,10 +11,14 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { label: "Home", href: "#home" },
-    { label: "Games", href: "#games", requiresAuth: true },
-    { label: "Utilities", href: "#utilities" },
-    { label: "PC Optimizations", href: "#pc-optimizations" },
-    { label: "Education", href: "#education" },
+    ...(isAuthenticated
+      ? [{ label: "Games", href: "#games", requiresAuth: true }]
+      : [
+          { label: "Utilities", href: "#utilities" },
+          { label: "PC Optimizations", href: "#pc-optimizations" },
+          { label: "Education", href: "#education" },
+        ]
+    ),
   ];
 
   return (
