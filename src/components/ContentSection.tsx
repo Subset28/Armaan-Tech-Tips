@@ -42,7 +42,7 @@ export const ContentSection: React.FC<ContentSectionProps> = ({
     <>
       <section
         id={id}
-        className={`py-16 ${isAuthenticated ? "bg-gamer-bg" : "bg-background"}`}
+        className={`py-20 ${isAuthenticated ? "bg-gamer-bg" : "bg-background"}`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-6">
@@ -67,7 +67,7 @@ export const ContentSection: React.FC<ContentSectionProps> = ({
             {description}
           </p>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 min-h-[60vh]">
             {items.map((item, index) => {
               const itemText = typeof item === 'string' ? item : item.text;
               const itemUrl = typeof item === 'string' ? undefined : item.url;
