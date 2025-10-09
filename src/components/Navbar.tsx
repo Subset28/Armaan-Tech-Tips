@@ -12,7 +12,12 @@ export const Navbar: React.FC = () => {
   const navLinks = [
     { label: "Home", href: "#home" },
     ...(isAuthenticated
-      ? [{ label: "Games", href: "#games", requiresAuth: true }]
+      ? [
+          { label: "Games", href: "#games", requiresAuth: true },
+          { label: "Utilities", href: "#utilities", requiresAuth: true },
+          { label: "PC Optimizations", href: "#pc-optimizations", requiresAuth: true },
+          { label: "Education", href: "#education", requiresAuth: true }
+        ]
       : [
           { label: "Utilities", href: "#utilities" },
           { label: "PC Optimizations", href: "#pc-optimizations" },
