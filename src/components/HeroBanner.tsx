@@ -7,7 +7,7 @@ export const HeroBanner: React.FC = () => {
       <img
         src={heroBanner}
         alt="Naruto eating ramen"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover animate-[float_6s_ease-in-out_infinite]"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-gamer-bg/40 via-transparent to-gamer-bg/60" />
 

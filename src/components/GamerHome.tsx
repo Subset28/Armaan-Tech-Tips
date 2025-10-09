@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import FriendsGallery from "@/components/FriendsGallery";
-import { VisitorCounter } from "@/components/VisitorCounter";
 
 export const GamerHome: React.FC = () => {
   const [hidden, setHidden] = useState(false);
@@ -32,9 +31,9 @@ export const GamerHome: React.FC = () => {
       {/* Friends grid (uses your /src/assets/friends images) */}
       {!hidden && <FriendsGallery />}
 
-      {/* Buttons + counter */}
+      {/* Buttons */}
       <section className="max-w-6xl mx-auto px-6 pb-10">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-start justify-items-center">
+        <div className="flex gap-6 items-center justify-center">
           {/* Left button: HIDE */}
           <button
             onClick={handleHide}
@@ -43,11 +42,6 @@ export const GamerHome: React.FC = () => {
           >
             {hidden ? "SHOW" : "HIDE"}
           </button>
-
-          {/* Center: visitor counter widget placed inline */}
-          <div className="pt-2">
-            <VisitorCounter variant="inline" />
-          </div>
 
           {/* Right button: ESCAPE */}
           <button
