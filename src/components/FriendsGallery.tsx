@@ -52,7 +52,7 @@ const FriendsGallery: React.FC = () => {
                 className="w-full h-auto object-contain max-h-96"
               />
               <div className="p-4">
-                <p className="font-bold text-lg text-center">{photo.name}</p>
+                <p className="font-bold text-lg text-center" style={{ color: '#FFF6A3' }}>{photo.name}</p>
               </div>
             </div>
           ))}
