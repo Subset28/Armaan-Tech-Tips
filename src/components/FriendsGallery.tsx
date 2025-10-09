@@ -39,10 +39,6 @@ const FriendsGallery: React.FC = () => {
 
   return (
     <div className="p-5">
-      <h2 className="text-3xl font-bold text-center mb-6">
-        Gaming Buddies
-      </h2>
-      
       {friendPhotos.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {friendPhotos.map((photo) => (
