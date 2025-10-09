@@ -1,12 +1,15 @@
-// vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "node:path";
+import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/Armaan-Tech-Tips/",           // exact repo name
-  plugins: [react()],                    // keep it simple; add other plugins later
+  base: "/Armaan-Tech-Tips/",
+  plugins: [
+    react(),
+    mode === 'development' && componentTagger(),
+  ].filter(Boolean),
   build: {
     outDir: "docs",
     assetsDir: "assets",
