@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { LoginModal } from "./LoginModal";
 import { Button } from "./ui/button";
@@ -10,18 +11,18 @@ export const Navbar: React.FC = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   const navLinks = [
-    { label: "Home", href: "#home" },
+    { label: "Home", href: "/", isRoute: true },
     ...(isAuthenticated
       ? [
-          { label: "Games", href: "#games", requiresAuth: true },
-          { label: "Utilities", href: "#utilities", requiresAuth: true },
-          { label: "PC Optimizations", href: "#pc-optimizations", requiresAuth: true },
-          { label: "Education", href: "#education", requiresAuth: true }
+          { label: "Games", href: "/games", requiresAuth: true, isRoute: true },
+          { label: "Utilities", href: "/utilities", requiresAuth: true, isRoute: true },
+          { label: "PC Optimizations", href: "/optimizations", requiresAuth: true, isRoute: true },
+          { label: "Education", href: "/education", requiresAuth: true, isRoute: true }
         ]
       : [
-          { label: "Utilities", href: "#utilities" },
-          { label: "PC Optimizations", href: "#pc-optimizations" },
-          { label: "Education", href: "#education" },
+          { label: "Utilities", href: "#utilities", isRoute: false },
+          { label: "PC Optimizations", href: "#pc-optimizations", isRoute: false },
+          { label: "Education", href: "#education", isRoute: false },
         ]
     ),
   ];
@@ -47,19 +48,35 @@ export const Navbar: React.FC = () => {
             <div className="hidden md:flex items-center gap-1">
               {navLinks.map((link) => {
                 if (link.requiresAuth && !isAuthenticated) return null;
-                return (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-fast ${
-                      isAuthenticated
-                        ? "text-gamer-muted hover:text-gamer-text hover:bg-gamer-border/30"
-                        : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-                    }`}
-                  >
-                    {link.label}
-                  </a>
-                );
+                if (link.isRoute) {
+                  return (
+                    <Link
+                      key={link.href}
+                      to={link.href}
+                      className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-fast ${
+                        isAuthenticated
+                          ? "text-gamer-muted hover:text-gamer-text hover:bg-gamer-border/30"
+                          : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                } else {
+                  return (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-fast ${
+                        isAuthenticated
+                          ? "text-gamer-muted hover:text-gamer-text hover:bg-gamer-border/30"
+                          : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                      }`}
+                    >
+                      {link.label}
+                    </a>
+                  );
+                }
               })}
             </div>
 
@@ -105,20 +122,37 @@ export const Navbar: React.FC = () => {
             <div className="md:hidden py-4 space-y-2">
               {navLinks.map((link) => {
                 if (link.requiresAuth && !isAuthenticated) return null;
-                return (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setIsMenuOpen(false)}
-                    className={`block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-fast ${
-                      isAuthenticated
-                        ? "text-gamer-muted hover:text-gamer-text hover:bg-gamer-border/30"
-                        : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-                    }`}
-                  >
-                    {link.label}
-                  </a>
-                );
+                if (link.isRoute) {
+                  return (
+                    <Link
+                      key={link.href}
+                      to={link.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-fast ${
+                        isAuthenticated
+                          ? "text-gamer-muted hover:text-gamer-text hover:bg-gamer-border/30"
+                          : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                } else {
+                  return (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-fast ${
+                        isAuthenticated
+                          ? "text-gamer-muted hover:text-gamer-text hover:bg-gamer-border/30"
+                          : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                      }`}
+                    >
+                      {link.label}
+                    </a>
+                  );
+                }
               })}
               <div className="pt-2">
                 {isAuthenticated ? (
