@@ -5,7 +5,6 @@ interface FriendPhoto {
   src: string;
   alt: string;
   name: string;
-  game: string;
 }
 
 // Dynamically import all JPG/PNG images from the friends directory
@@ -18,13 +17,20 @@ try {
     { eager: true, as: "url" }
   );
 
-  friendPhotos = Object.entries(friendImages).map(([path, src]) => ({
-    id: path.split('/').pop()?.replace(/\.[^/.]+$/, '') || '',
-    src: src as string,
-    alt: `Friend ${path}`,
-    name: path.split('/').pop()?.replace(/\.[^/.]+$/, '') || '',
-    game: 'Gaming Together!', // Default game name, can be customized
-  }));
+  friendPhotos = Object.entries(friendImages).map(([path, src]) => {
+    const filename = path.split('/').pop()?.replace(/\.[^/.]+$/, '') || '';
+    // Clean up the filename for better readability
+    const cleanName = filename
+      .replace(/[-_]/g, ' ') // Replace dashes and underscores with spaces
+      .replace(/\b\w/g, l => l.toUpperCase()); // Capitalize first letter of each word
+
+    return {
+      id: filename,
+      src: src as string,
+      alt: `Friend ${cleanName}`,
+      name: cleanName,
+    };
+  });
 } catch (error) {
   console.warn('No images found in assets/friends directory');
 }
@@ -50,8 +56,7 @@ const FriendsGallery: React.FC = () => {
                 className="w-full h-auto object-contain max-h-96"
               />
               <div className="p-4">
-                <p className="font-bold">{photo.name}</p>
-                <p className="text-sm text-gray-600">Playing: {photo.game}</p>
+                <p className="font-bold text-lg text-center">{photo.name}</p>
               </div>
             </div>
           ))}
