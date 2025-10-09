@@ -7,21 +7,8 @@ type Props = {
 
 export const VisitorCounter: React.FC<Props> = ({ variant = "floating", visible = true }) => {
   useEffect(() => {
-    // Load the counter scripts
-    const authScript = document.createElement('script');
-    authScript.type = 'text/javascript';
-    authScript.src = 'https://www.freevisitorcounters.com/auth.php?id=4ec2798bde811331fb1531de8e659293860a2208';
-    document.body.appendChild(authScript);
-
-    const counterScript = document.createElement('script');
-    counterScript.type = 'text/javascript';
-    counterScript.src = 'https://www.freevisitorcounters.com/en/home/counter/1233557/t/0';
-    document.body.appendChild(counterScript);
-
-    return () => {
-      document.body.removeChild(authScript);
-      document.body.removeChild(counterScript);
-    };
+    // Scripts are already loaded in index.html
+    // This component just renders the counter container
   }, []);
 
   if (!visible) {

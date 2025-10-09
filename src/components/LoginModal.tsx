@@ -27,8 +27,8 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
       
       if (success) {
         toast({
-          title: "Welcome back!",
-          description: "Entering Gamer Mode...",
+          title: "Access Granted",
+          description: "The library shelf slides open...",
         });
         onClose();
         setUsername("");
