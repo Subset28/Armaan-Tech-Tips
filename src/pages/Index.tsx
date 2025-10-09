@@ -17,7 +17,7 @@ const Index = () => {
       isAuthenticated ? "bg-gamer-bg" : "bg-background"
     }`}>
       {/* Visitor counter only visible when authenticated */}
-      {isAuthenticated && <VisitorCounter variant="floating" visible={true} />}
+      <VisitorCounter variant="floating" visible={isAuthenticated} />
       <ShareBanner />
       <Navbar />
       
