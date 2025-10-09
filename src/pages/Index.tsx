@@ -7,7 +7,6 @@ import { GamesHub } from "@/components/GamesHub";
 import { ContentSection } from "@/components/ContentSection";
 import { HeroBanner } from "@/components/HeroBanner";
 import { GamerHome } from "@/components/GamerHome";
-import { VisitorCounter } from "@/components/VisitorCounter";
 
 const Index = () => {
   const { isAuthenticated } = useAuth();
@@ -16,8 +15,6 @@ const Index = () => {
     <div className={`min-h-screen transition-colors duration-300 ${
       isAuthenticated ? "bg-gamer-bg" : "bg-background"
     }`}>
-      {/* Visitor counter - loaded on all pages but only visible on home when authenticated */}
-      <VisitorCounter variant="floating" visible={isAuthenticated} />
       <ShareBanner />
       <Navbar />
       
