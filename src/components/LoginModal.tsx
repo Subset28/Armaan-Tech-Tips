@@ -53,6 +53,9 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
           <DialogDescription>
             Enter your credentials to access the gaming hub
           </DialogDescription>
+          <DialogDescription className="mt-2 font-medium">
+            Enter your credentials to continue.
+          </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
           <div className="space-y-2">
