@@ -16,7 +16,6 @@ const Index = () => {
     <div className={`min-h-screen transition-colors duration-300 ${
       isAuthenticated ? "bg-gamer-bg" : "bg-background"
     }`}>
-      <VisitorCounter variant="floating" />
       <ShareBanner />
       <Navbar />
 
@@ -198,6 +197,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      <VisitorCounter variant="floating" />
     </div>
   );
 };

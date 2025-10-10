@@ -8,7 +8,6 @@ import { VisitorCounter } from "@/components/VisitorCounter";
 const EducationPage = () => {
   return (
     <div className="min-h-screen bg-gamer-bg">
-      <VisitorCounter variant="floating" />
       <ShareBanner />
       <Navbar />
 
@@ -28,6 +27,8 @@ const EducationPage = () => {
           { text: "🖥️ Tech Concepts Explained", guide: "tech-concepts" },
         ]}
       />
+
+      <VisitorCounter variant="floating" />
     </div>
   );
 };

@@ -8,7 +8,6 @@ import { VisitorCounter } from "@/components/VisitorCounter";
 const UtilitiesPage = () => {
   return (
     <div className="min-h-screen bg-gamer-bg">
-      <VisitorCounter variant="floating" />
       <ShareBanner />
       <Navbar />
 
@@ -27,6 +26,8 @@ const UtilitiesPage = () => {
           { text: "📅 LCPS Calendars", url: "https://www.lcps.org/documents/discover-lcps/about-loudoun/calendars---loudoun-county-public-schools/629038" },
         ]}
       />
+
+      <VisitorCounter variant="floating" />
     </div>
   );
 };

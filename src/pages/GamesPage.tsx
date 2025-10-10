@@ -9,7 +9,6 @@ import { VisitorCounter } from "@/components/VisitorCounter";
 const GamesPage = () => {
   return (
     <div className="min-h-screen bg-gamer-bg">
-      <VisitorCounter variant="floating" />
       <ShareBanner />
       <Navbar />
 
@@ -18,6 +17,8 @@ const GamesPage = () => {
       <GamerHome />
 
       <GamesHub />
+
+      <VisitorCounter variant="floating" />
     </div>
   );
 };

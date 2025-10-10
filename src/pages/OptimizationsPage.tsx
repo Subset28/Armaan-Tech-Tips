@@ -8,7 +8,6 @@ import { VisitorCounter } from "@/components/VisitorCounter";
 const OptimizationsPage = () => {
   return (
     <div className="min-h-screen bg-gamer-bg">
-      <VisitorCounter variant="floating" />
       <ShareBanner />
       <Navbar />
 
@@ -32,6 +31,8 @@ const OptimizationsPage = () => {
           { text: "🧹 System Cleanup Tools", guide: "system-cleanup" },
         ]}
       />
+
+      <VisitorCounter variant="floating" />
     </div>
   );
 };
