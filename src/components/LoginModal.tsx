@@ -27,16 +27,17 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
       
       if (success) {
         toast({
-          title: "User Authorized",
-          description: "Welcome back.",
+          title: "Access Granted",
+          description: "The library shelf slides open...",
+          duration: 3000,
         });
         onClose();
         setUsername("");
         setPassword("");
       } else {
         toast({
-          title: "Login failed",
-          description: "Invalid username or password",
+          title: "Access Denied",
+          description: "Invalid credentials",
           variant: "destructive",
         });
       }
