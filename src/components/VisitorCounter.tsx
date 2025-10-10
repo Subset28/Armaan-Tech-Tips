@@ -1,14 +1,36 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 type Props = {
   variant?: "floating" | "inline";
   visible?: boolean;
 };
 
+declare global {
+  interface Window {
+    sfc_load_counter?: () => void;
+  }
+}
+
 export const VisitorCounter: React.FC<Props> = ({ variant = "floating", visible = true }) => {
+  const counterRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    // Scripts are already loaded in index.html
-    // This component just renders the counter container
+    // Load the visitor counter scripts if not already loaded
+    const loadCounter = () => {
+      if (window.sfc_load_counter) {
+        window.sfc_load_counter();
+      } else {
+        // Fallback: create a simple counter if the script doesn't work
+        if (counterRef.current && !counterRef.current.querySelector('.visitor-count')) {
+          const counterDiv = document.createElement('div');
+          counterDiv.className = 'visitor-count';
+          counterDiv.textContent = 'Loading...';
+          counterRef.current.appendChild(counterDiv);
+        }
+      }
+    };
+
+    loadCounter();
   }, []);
 
   if (!visible) {
@@ -21,7 +43,7 @@ export const VisitorCounter: React.FC<Props> = ({ variant = "floating", visible 
                      bg-gamer-card/90 px-3 py-2 text-xs text-gamer-text shadow-lg">
         <div className="text-center">
           <div className="text-[10px] opacity-75 mb-1">Visitors</div>
-          <div id="sfcxkflcxztqpzjcexu2jw9j1ee8ugypwn6" className="font-mono text-sm"></div>
+          <div ref={counterRef} id="sfcxkflcxztqpzjcexu2jw9j1ee8ugypwn6" className="font-mono text-sm"></div>
         </div>
       </div>
     );
@@ -29,7 +51,7 @@ export const VisitorCounter: React.FC<Props> = ({ variant = "floating", visible 
 
   return (
     <div className="text-center text-sm">
-      <div id="sfcxkflcxztqpzjcexu2jw9j1ee8ugypwn6"></div>
+      <div ref={counterRef} id="sfcxkflcxztqpzjcexu2jw9j1ee8ugypwn6"></div>
     </div>
   );
 };
