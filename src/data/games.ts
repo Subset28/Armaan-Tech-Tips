@@ -5,6 +5,7 @@ import game2048 from "@/assets/thumbnails/2048.jpg";
 import slope from "@/assets/thumbnails/slope.jpg";
 import bitlife from "@/assets/thumbnails/bitlife.jpg";
 import retroBowl from "@/assets/thumbnails/retro-bowl.jpg";
+import fallback from "@/assets/thumbnails/_fallback.png";
 
 export interface Game {
   id: string;
@@ -72,5 +73,54 @@ export const games: Game[] = [
     thumbnail: retroBowl,
     url: "https://vaz63.github.io/g5/class-400/",
     featured: true,
+  },
+  {
+    id: "fireboy-watergirl",
+    title: "Fireboy and Watergirl 1: Forest Temple",
+    tags: ["puzzle", "adventure"],
+    thumbnail: fallback,
+    url: "https://vaz63.github.io/g177/class-346",
+  },
+  {
+    id: "bob-robber-4",
+    title: "Bob the Robber 4",
+    tags: ["stealth", "strategy"],
+    thumbnail: fallback,
+    url: "https://vaz63.github.io/g97/class-568",
+  },
+  {
+    id: "raft-wars",
+    title: "Raft Wars",
+    tags: ["shooting", "strategy"],
+    thumbnail: fallback,
+    url: "https://vaz63.github.io/g5/class-409",
+  },
+  {
+    id: "monkey-mart",
+    title: "Monkey Mart",
+    tags: ["management", "idle"],
+    thumbnail: fallback,
+    url: "https://vaz63.github.io/g77/class-829",
+  },
+  {
+    id: "basketball-legends",
+    title: "Basketball Legends",
+    tags: ["sports", "basketball"],
+    thumbnail: fallback,
+    url: "https://vaz63.github.io/g5/class-474",
+  },
+  {
+    id: "tomb-of-mask",
+    title: "Tomb Of The Mask",
+    tags: ["arcade", "maze"],
+    thumbnail: fallback,
+    url: "https://vaz63.github.io/g26/class-438",
+  },
+  {
+    id: "moto-x3m-2",
+    title: "Moto X3m 2",
+    tags: ["racing", "motorcycle"],
+    thumbnail: fallback,
+    url: "https://vaz63.github.io/g26/class-459",
   },
 ];
