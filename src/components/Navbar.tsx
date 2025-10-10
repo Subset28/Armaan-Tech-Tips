@@ -67,6 +67,16 @@ export const Navbar: React.FC = () => {
                     <a
                       key={link.href}
                       href={link.href}
+                      onClick={(e) => {
+                        if (link.href.startsWith('#')) {
+                          e.preventDefault();
+                          const targetId = link.href.substring(1);
+                          const targetElement = document.getElementById(targetId);
+                          if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                          }
+                        }
+                      }}
                       className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-fast ${
                         isAuthenticated
                           ? "text-gamer-muted hover:text-gamer-text hover:bg-gamer-border/30"
@@ -142,7 +152,19 @@ export const Navbar: React.FC = () => {
                     <a
                       key={link.href}
                       href={link.href}
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={(e) => {
+                        if (link.href.startsWith('#')) {
+                          e.preventDefault();
+                          setIsMenuOpen(false);
+                          const targetId = link.href.substring(1);
+                          const targetElement = document.getElementById(targetId);
+                          if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                          }
+                        } else {
+                          setIsMenuOpen(false);
+                        }
+                      }}
                       className={`block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-fast ${
                         isAuthenticated
                           ? "text-gamer-muted hover:text-gamer-text hover:bg-gamer-border/30"
