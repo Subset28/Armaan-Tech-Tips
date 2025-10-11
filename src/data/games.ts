@@ -19,27 +19,11 @@ export interface Game {
 export const games: Game[] = [
   // --- Popular 🔥 ---
   {
-    id: "poly-track",
-    title: "Poly Track",
-    tags: ["racing", "arcade"],
-    thumbnail: polyTrack,
-    url: "https://iliill1.github.io/polytrackfix/polytrack/",
-    featured: true,
-  },
-  {
     id: "cookie-clicker",
     title: "Cookie Clicker",
     tags: ["idle", "clicker"],
     thumbnail: cookieClicker,
     url: "https://scherb96.github.io/",
-    featured: true,
-  },
-  {
-    id: "drive-mad",
-    title: "Drive Mad",
-    tags: ["cars", "physics"],
-    thumbnail: driveMad,
-    url: "https://lizzyben1.github.io/poopygamesbeta/play/drive-mad/",
     featured: true,
   },
   {
@@ -51,11 +35,27 @@ export const games: Game[] = [
     featured: true,
   },
   {
+    id: "retro-bowl",
+    title: "Retro Bowl",
+    tags: ["sports", "football"],
+    thumbnail: retroBowl,
+    url: "https://vaz63.github.io/g5/class-400/",
+    featured: true,
+  },
+  {
     id: "slope",
     title: "Slope",
     tags: ["arcade", "reflex"],
     thumbnail: slope,
     url: "https://lizzyben1.github.io/poopygamesbeta/play/slope/",
+    featured: true,
+  },
+  {
+    id: "poly-track",
+    title: "Poly Track",
+    tags: ["racing", "arcade"],
+    thumbnail: polyTrack,
+    url: "https://iliill1.github.io/polytrackfix/polytrack/",
     featured: true,
   },
   {
@@ -67,13 +67,22 @@ export const games: Game[] = [
     featured: true,
   },
   {
-    id: "retro-bowl",
-    title: "Retro Bowl",
-    tags: ["sports", "football"],
-    thumbnail: retroBowl,
-    url: "https://vaz63.github.io/g5/class-400/",
+    id: "drive-mad",
+    title: "Drive Mad",
+    tags: ["cars", "physics"],
+    thumbnail: driveMad,
+    url: "https://lizzyben1.github.io/poopygamesbeta/play/drive-mad/",
     featured: true,
   },
+  {
+    id: "monkey-mart",
+    title: "Monkey Mart",
+    tags: ["management", "idle"],
+    thumbnail: fallback,
+    url: "https://vaz63.github.io/g77/class-829",
+    featured: true,
+  },
+  // --- All Games ---
   {
     id: "fireboy-watergirl",
     title: "Fireboy and Watergirl 1: Forest Temple",
@@ -94,13 +103,6 @@ export const games: Game[] = [
     tags: ["shooting", "strategy"],
     thumbnail: fallback,
     url: "https://vaz63.github.io/g5/class-409",
-  },
-  {
-    id: "monkey-mart",
-    title: "Monkey Mart",
-    tags: ["management", "idle"],
-    thumbnail: fallback,
-    url: "https://vaz63.github.io/g77/class-829",
   },
   {
     id: "basketball-legends",
